@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 20px;
+    
+    font-size: 4em;
+    background-color: cornflowerblue;
+}
+
+header {
+    border-bottom: 2px solid grey;
+}
