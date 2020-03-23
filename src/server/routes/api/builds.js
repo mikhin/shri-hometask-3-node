@@ -26,7 +26,7 @@ router.post('/:commitHash', (req, res) => {
       branchName = response.data.data.mainBranch;
     })
     .then(() => git
-      .cwd(`./src/uploads/repos/${repoName.replace('/', '-')}`)
+      .cwd(`./src/server/uploads/repos/${repoName.replace('/', '-')}`)
       .then(() => git.show([`${commitHash}`, '--pretty=format:%an%n%s', '--quiet'])))
     .then((response) => {
       [authorName, commitMessage] = response.split('\n');

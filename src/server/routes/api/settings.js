@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => git()
   .silent(true)
-  .clone(`https://github.com/${req.body.repoName}.git`, `./src/uploads/repos/${req.body.repoName.replace('/', '-')}`)
+  .clone(`https://github.com/${req.body.repoName}.git`, `./server/src/uploads/repos/${req.body.repoName.replace('/', '-')}`)
   .then(() => axiosRequest.post('conf', req.body))
   .then(() => res.send(req.body))
   .catch((error) => {
