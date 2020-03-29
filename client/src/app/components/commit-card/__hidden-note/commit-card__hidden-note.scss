@@ -1,0 +1,5 @@
+@import './client/src/app/helpers/visually-hidden';
+
+.commit-card__hidden-note {
+  @include visuallyHidden();
+}

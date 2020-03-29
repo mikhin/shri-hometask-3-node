@@ -1,0 +1,28 @@
+.commit-card {
+  padding: var(--space_l) var(--space_m);
+  position: relative;
+
+  @media (min-width: 1024px) {
+    padding: var(--space_m) var(--space_l);
+  }
+
+  &::before {
+    position: absolute;
+    top: var(--space_l);
+    left: var(--space_m);
+    content: '';
+    display: inline-block;
+    width: var(--space_l);
+    height: var(--space_l);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+
+    @media (min-width: 1024px) {
+      width: var(--space_xxl);
+      height: var(--space_xxl);
+      top: 13px;
+      left: var(--space_xxl);
+    }
+  }
+}

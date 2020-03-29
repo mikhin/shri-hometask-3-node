@@ -1,0 +1,18 @@
+.button_theme_primary {
+  color: var(--color_text_primary);
+  text-align: center;
+  box-sizing: border-box;
+  background: var(--color_button_bg_primary);
+  border-radius: 4px;
+  padding: var(--space_xl);
+  padding-top: var(--space_m);
+  padding-bottom: var(--space_m);
+
+  &:hover {
+    background-color: var(--color_button_bg_primary_accent);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px #B38F00;
+  }
+}

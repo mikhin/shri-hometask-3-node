@@ -1,0 +1,5 @@
+.header__action-item {
+  &:not(:last-child) {
+    margin-right: var(--space_xs);
+  }
+}

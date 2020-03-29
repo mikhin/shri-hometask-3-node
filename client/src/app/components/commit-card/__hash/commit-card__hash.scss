@@ -1,0 +1,9 @@
+.commit-card__hash {
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color_text_secondary);
+
+  @media (min-width: 1024px) {
+    margin-right: var(--space_s);
+  }
+}

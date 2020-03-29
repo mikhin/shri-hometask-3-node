@@ -1,0 +1,15 @@
+.commit-card__duration {
+  display: inline-flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: var(--space_l);
+    background-image: url('./commit-card__duration.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: var(--space_xxs);
+  }
+}

@@ -1,0 +1,11 @@
+.header__content {
+  display: flex;
+  padding-top: var(--space_m);
+  padding-bottom: var(--space_m);
+  align-items: flex-start;
+
+  @media (min-width: 1024px) {
+    padding-top: var(--space_s);
+    padding-bottom: var(--space_s);
+  }
+}

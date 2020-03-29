@@ -1,0 +1,8 @@
+.field-label_required {
+  &::after {
+    content: '*';
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--color_warning);
+  }
+}

@@ -1,0 +1,8 @@
+.build-details-layout__commit {
+  margin-top: var(--space_xs);
+  margin-bottom: var(--space_l);
+
+  @media (min-width: 1024px) {
+    margin-bottom: var(--space_m);
+  }
+}

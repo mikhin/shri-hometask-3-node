@@ -1,0 +1,21 @@
+.commit-card__author {
+  display: flex;
+  align-items: center;
+  margin-top: var(--space_xs);
+
+  @media (min-width: 1024px) {
+    display: inline-block;
+  }
+
+  &::before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    width: 14px;
+    height: var(--space_l);
+    background-image: url('./commit-card__author.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: var(--space_xxs);
+  }
+}

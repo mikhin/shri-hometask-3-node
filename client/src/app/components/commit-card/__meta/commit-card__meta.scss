@@ -1,0 +1,12 @@
+.commit-card__meta {
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color_text_secondary);
+
+  @media (min-width: 1024px) {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}

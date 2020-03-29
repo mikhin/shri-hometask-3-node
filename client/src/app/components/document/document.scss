@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "YS Text";
+  font-weight: 400;
+  src: url("./text-regular.woff2") format("woff2"),
+  url("./text-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "YS Text";
+  font-weight: 500;
+  src: url("./text-medium.woff2") format("woff2"),
+  url("./text-medium.woff") format("woff");
+}
+
+html, .document__body, .document__app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

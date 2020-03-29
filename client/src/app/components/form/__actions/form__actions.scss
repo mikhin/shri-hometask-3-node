@@ -1,0 +1,10 @@
+.form__actions {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space_xl);
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    margin-top: var(--space_xxl);
+  }
+}

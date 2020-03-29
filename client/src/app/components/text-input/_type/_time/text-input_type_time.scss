@@ -1,0 +1,13 @@
+.text-input_type_time {
+  display: flex;
+  align-items: center;
+
+  .text-input__input {
+    -webkit-appearance: none;
+    display: inline;
+    width: 52px;
+    margin-top: 0;
+    margin-left: var(--space_xs);
+    text-align: right;
+  }
+}

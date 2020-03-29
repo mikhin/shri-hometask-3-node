@@ -1,0 +1,15 @@
+.welcome-action {
+  text-align: center;
+  max-width: 200px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 124px;
+    height: 124px;
+    background-image: url('./welcome-action.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto 32px;
+  }
+}

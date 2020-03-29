@@ -1,0 +1,20 @@
+.commit-card__datetime {
+  display: inline-flex;
+  align-items: center;
+  margin-right: var(--space_s);
+
+  @media (min-width: 1024px) {
+    margin-bottom: var(--space_m);
+  }
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: var(--space_l);
+    background-image: url('./commit-card__datetime.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: var(--space_xxs);
+  }
+}
