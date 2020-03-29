@@ -7,7 +7,8 @@ module.exports = {
     "no-console": 0,
     "react/react-in-jsx-scope": 0,
     "react/jsx-pascal-case": 0,
-    "camelcase": "off"
+    "camelcase": "off",
+    "class-methods-use-this": "off",
   },
   globals: {
     React: true,
