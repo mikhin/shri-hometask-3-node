@@ -2,7 +2,7 @@
   "name": "shri-hometask-3-node",
   "version": "0.1.0",
   "scripts": {
-    "dev:server": "nodemon ./server/index.js",
+    "dev:server": "nodemon ./server/index.js localhost 5000",
     "dev:client": "node client/scripts/start.js",
     "build:client:production": "node client/scripts/build.js",
     "lint:js": "eslint ./client ./server --fix"
@@ -87,5 +87,6 @@
     "presets": [
       "react-app"
     ]
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
