@@ -5,7 +5,10 @@ const cache = require('../../modules/cache');
 
 router.get('/', (req, res) => {
   axiosRequest.get('build/list')
-    .then((response) => res.send(response.data))
+    .then((response) => {
+      const builds = response.data.data;
+      res.send([...builds]);
+    })
     .catch((error) => {
       res.status(500);
       return res.send(error.toString());
@@ -13,6 +16,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/:commitHash', (req, res) => {
+  // Далее идет плохая модель. Очень плохая модель. Так нельзя.
   let repoName;
   let commitMessage;
   let branchName;
@@ -26,7 +30,7 @@ router.post('/:commitHash', (req, res) => {
       branchName = response.data.data.mainBranch;
     })
     .then(() => git
-      .cwd(`./src/server/uploads/repos/${repoName.replace('/', '-')}`)
+      .cwd(`./server/uploads/repos/${repoName.replace('/', '-')}`)
       .then(() => git.show([`${commitHash}`, '--pretty=format:%an%n%s', '--quiet'])))
     .then((response) => {
       [authorName, commitMessage] = response.split('\n');
@@ -37,13 +41,23 @@ router.post('/:commitHash', (req, res) => {
         branchName,
         authorName,
       })
-        .then(() => {
-          res.send({
-            commitMessage,
-            commitHash,
-            branchName,
-            authorName,
-          });
+        .then((axiosResponse) => {
+          const build = axiosResponse.data.data;
+          setTimeout(() => {
+            axiosRequest.post('build/start', {
+              buildId: build.id,
+              dateTime: '2020-03-14T16:24:58.213Z',
+            });
+          }, 3000);
+          setTimeout(() => {
+            axiosRequest.post('build/finish', {
+              buildId: build.id,
+              duration: 15,
+              success: true,
+              buildLog: 'LOL LOG',
+            });
+          }, 6000);
+          return res.send({ ...build });
         });
     })
     .catch((error) => {
@@ -56,7 +70,10 @@ router.get('/:buildId', (req, res) => {
   const { buildId } = req.params;
 
   axiosRequest.get(`build/details?buildId=${buildId}`)
-    .then((response) => res.send(response.data))
+    .then((response) => {
+      const build = response.data.data;
+      res.send({ ...build });
+    })
     .catch((error) => {
       res.status(500);
       return res.send(error.toString());
@@ -93,9 +110,9 @@ router.post('/:buildId/finish', (req, res) => {
 
   axiosRequest.post('build/finish', {
     buildId,
-    duration: 0,
+    duration: 15,
     success: true,
-    buildLog: 'Very interesting build log.',
+    buildLog: 'LOL LOG',
   })
     .then((response) => res.send(response.data))
     .catch((error) => {

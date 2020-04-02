@@ -1,0 +1,9 @@
+.commit-card_type_inprogress {
+  &::before {
+    background-image: url('./commit-card_type_inprogress.svg');
+  }
+
+  .commit-card__id {
+    color: #ff72f1;
+  }
+}

@@ -3,7 +3,7 @@ import Button from '../button';
 import Logo from '../logo';
 
 const propTypes = {
-  actions: PropTypes.array.isRequired,
+  actions: PropTypes.array,
   logoText: PropTypes.string,
   logoURL: PropTypes.string,
 };
@@ -39,6 +39,7 @@ const Header = (props) => {
                       ...action.mods,
                     }}
                     to={action.url}
+                    onClick={action.onClick}
                     hiddenText={action.hiddenText}
                     icon={action.icon}
                   >

@@ -1,6 +1,7 @@
 .text-input_type_time {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   .text-input__input {
     -webkit-appearance: none;
@@ -9,5 +10,9 @@
     margin-top: 0;
     margin-left: var(--space_xs);
     text-align: right;
+  }
+
+  .text-input__error {
+    width: 100%;
   }
 }

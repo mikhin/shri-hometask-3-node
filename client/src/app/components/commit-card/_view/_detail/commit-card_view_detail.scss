@@ -13,7 +13,9 @@
   }
 
   .commit-card__meta {
-    display: block;
+    max-width: none;
+    position: static;
+    flex-direction: row;
   }
 
   .commit-card__datetime {

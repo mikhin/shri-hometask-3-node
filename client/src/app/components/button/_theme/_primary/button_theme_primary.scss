@@ -15,4 +15,8 @@
   &:focus {
     box-shadow: 0 0 0 2px #B38F00;
   }
+
+  &.button_disabled {
+    background-color: var(--color_button_bg_secondary_accent);
+  }
 }

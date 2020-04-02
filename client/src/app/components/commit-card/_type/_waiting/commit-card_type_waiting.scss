@@ -1,0 +1,9 @@
+.commit-card_type_waiting {
+  &::before {
+    background-image: url('./commit-card_type_waiting.svg');
+  }
+
+  .commit-card__id {
+    color: #FF9A00;
+  }
+}

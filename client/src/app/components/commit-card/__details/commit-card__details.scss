@@ -4,8 +4,6 @@
   margin: 0 0 var(--space_xs);
 
   @media (min-width: 1024px) {
-    position: absolute;
-    z-index: -1;
     bottom: 4px;
     padding-bottom: 0;
     border-bottom: 0;

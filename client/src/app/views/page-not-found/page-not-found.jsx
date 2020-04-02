@@ -5,6 +5,7 @@ const PageNotFound = () => (
   <PageLayout
     actions={startScreenPageHeaderActions}
     logoURL="/"
+    isPageLoaded={true}
   >
     <h1>Page not found</h1>
   </PageLayout>

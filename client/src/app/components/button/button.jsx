@@ -8,6 +8,8 @@ const propTypes = {
   children: PropTypes.string,
   hiddenText: PropTypes.string,
   icon: PropTypes.object,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 const defaultProps = {
@@ -15,15 +17,17 @@ const defaultProps = {
 
 const Button = (props) => {
   const {
-    to, children, hiddenText, icon: Icon,
+    to, children, hiddenText, icon: Icon, disabled, onClick,
   } = props;
 
   const Tag = to ? Link : 'button';
 
   return (
     <Tag
-      className={b('button', props)}
+      className={b('button', props, { disabled })}
       to={to}
+      disabled={disabled}
+      onClick={onClick}
     >
       {Icon && (
         <div

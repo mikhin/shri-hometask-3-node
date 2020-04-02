@@ -1,4 +1,3 @@
-import PageTrim from '../page-trim';
 import Button from '../button';
 
 const propTypes = {
@@ -16,21 +15,19 @@ const CommitList = (props) => {
     <div
       className={b('commit-list', props)}
     >
-      <PageTrim>
-        <ul className={b('commit-list__content')}>
-          {children}
-        </ul>
-        <div className={b('commit-list__action')}>
-          <Button
-            mods={{
-              theme: 'additional',
-            }}
-            to="/"
-          >
-            Show more
-          </Button>
-        </div>
-      </PageTrim>
+      <ul className={b('commit-list__content')}>
+        {children}
+      </ul>
+      <div className={b('commit-list__action')}>
+        <Button
+          mods={{
+            theme: 'additional',
+          }}
+          to="/"
+        >
+          Show more
+        </Button>
+      </div>
     </div>
   );
 };

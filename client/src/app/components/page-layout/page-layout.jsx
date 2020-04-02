@@ -1,3 +1,5 @@
+import LoadingProgress from 'react-js-loading-progress-bar';
+
 import Page, { Page__Header, Page__Body, Page__Footer } from '../page';
 import Footer from '../footer';
 import Header from '../header';
@@ -11,6 +13,7 @@ const propTypes = {
   pageMods: PropTypes.shape({
     views: PropTypes.string,
   }),
+  isPageLoaded: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -18,7 +21,7 @@ const defaultProps = {
 
 const PageLayout = (props) => {
   const {
-    children, actions, logoText, logoURL, pageMods,
+    children, actions, logoText, logoURL, pageMods, isPageLoaded,
   } = props;
 
   return (
@@ -33,7 +36,7 @@ const PageLayout = (props) => {
       </Page__Header>
       <Page__Body>
         <PageTrim>
-          {children}
+          {isPageLoaded ? children : <LoadingProgress useSpinner visualOnly active={true}/>}
         </PageTrim>
       </Page__Body>
       <Page__Footer>

@@ -11,6 +11,8 @@ const propTypes = {
   hash: PropTypes.string,
   author: PropTypes.string,
   url: PropTypes.string,
+  datetime: PropTypes.string,
+  duration: PropTypes.number,
 };
 
 const defaultProps = {
@@ -19,7 +21,7 @@ const defaultProps = {
 
 const CommitCard = (props) => {
   const {
-    id, title, branch, hash, author, url,
+    id, title, branch, hash, author, url, datetime, duration,
   } = props;
 
   return (
@@ -48,12 +50,22 @@ const CommitCard = (props) => {
           <span className={b('commit-card__hidden-note')}>Автор коммита</span>
           <span className={b('commit-card__author')}>{author}</span>
         </p>
-        <p className={b('commit-card__meta')}>
-          <span className={b('commit-card__hidden-note')}>Время и дата начала сборки билда</span>
-          <span className={b('commit-card__datetime')}>21 янв, 03:06</span>
-          <span className={b('commit-card__hidden-note')}>Длительность сборки билда</span>
-          <span className={b('commit-card__duration')}>1 ч 20 мин</span>
-        </p>
+        {(datetime || duration) && (
+          <p className={b('commit-card__meta')}>
+            {datetime && (
+              <>
+                <span className={b('commit-card__hidden-note')}>Время и дата начала сборки билда</span>
+                <span className={b('commit-card__datetime')}>{datetime}</span>
+              </>
+            )}
+            {duration && duration.toString() && (
+              <>
+                <span className={b('commit-card__hidden-note')}>Длительность сборки билда</span>
+                <span className={b('commit-card__duration')}>{duration}</span>
+              </>
+            )}
+          </p>
+        )}
       </div>
     </article>
   );

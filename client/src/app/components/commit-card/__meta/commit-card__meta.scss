@@ -5,7 +5,10 @@
   color: var(--color_text_secondary);
 
   @media (min-width: 1024px) {
-    margin-left: auto;
+    max-width: 30%;
+    position: absolute;
+    top: var(--space_m);
+    right: var(--space_l);
     display: flex;
     flex-direction: column;
   }

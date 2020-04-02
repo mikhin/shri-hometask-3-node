@@ -24,14 +24,14 @@ Content-Type: application/json
 ###
 
 # /builds/:buildId/start
-POST http://0.0.0.0:5000/api/builds/99d08aec-0482-4daf-8de6-df90d82da94a/start
+POST http://0.0.0.0:5000/api/builds/9989698b-393c-435c-ace2-7e728da3f04f/start
 accept: */*
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM4MjU4MzE4IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1pa2hpbiIsInVybjpnaXRodWI6bmFtZSI6Ill1cmkgTWlraGluIiwidXJuOmdpdGh1Yjp1cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL21pa2hpbiIsIm5iZiI6MTU4NDE4NDM5NSwiZXhwIjoxNTg2Nzc2Mzk1LCJpc3MiOiJTaHJpLUhvbWV3b3JrIiwiYXVkIjoiU2hyaS1Ib21ld29yayJ9.pxtqCCAUhg7H7-I8mPT9S-O42M14zQpQ23MVu8Wa4f4
 
 ###
 
-# /builds/:commitHash/finish
-POST http://0.0.0.0:5000/api/builds/99d08aec-0482-4daf-8de6-df90d82da94a/finish
+# /builds/:buildId/finish
+POST http://0.0.0.0:5000/api/builds/db31e0f2-8b6d-4a47-9b2f-e38f2856b49f/finish
 accept: */*
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM4MjU4MzE4IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1pa2hpbiIsInVybjpnaXRodWI6bmFtZSI6Ill1cmkgTWlraGluIiwidXJuOmdpdGh1Yjp1cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL21pa2hpbiIsIm5iZiI6MTU4NDE4NDM5NSwiZXhwIjoxNTg2Nzc2Mzk1LCJpc3MiOiJTaHJpLUhvbWV3b3JrIiwiYXVkIjoiU2hyaS1Ib21ld29yayJ9.pxtqCCAUhg7H7-I8mPT9S-O42M14zQpQ23MVu8Wa4f4
 

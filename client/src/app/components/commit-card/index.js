@@ -17,6 +17,7 @@ require('./__title/commit-card__title.scss');
 require('./commit-card.scss');
 
 require('./_type/_error/commit-card_type_error.scss');
-require('./_type/_pending/commit-card_type_pending.scss');
+require('./_type/_inprogress/commit-card_type_inprogress.scss');
+require('./_type/_waiting/commit-card_type_waiting.scss');
 require('./_type/_success/commit-card_type_success.scss');
 require('./_view/_detail/commit-card_view_detail.scss');
