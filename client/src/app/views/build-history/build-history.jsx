@@ -114,7 +114,7 @@ class BuildHistory extends React.Component {
           formError: result.message,
         });
       }
-    } catch {
+    } catch (error) {
       this.setState({ fetchStatus: 'buildRequestingError' });
     }
   };
@@ -159,7 +159,6 @@ class BuildHistory extends React.Component {
       <PageLayout
         actions={menuItems}
         logoText={repoName}
-        logoURL={'/'}
         isPageLoaded={fetchStatus !== 'buildsLoading'}
       >
         <BuildHistoryLayout>

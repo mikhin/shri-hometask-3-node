@@ -12,14 +12,14 @@ class MainAppRoutes extends React.Component {
   render() {
     const {
       settings: {
-        id: settingsID,
+        repoName,
       },
     } = this.props;
 
     return (
       <>
         <Switch>
-          <Route exact path="/" component={settingsID ? BuildHistory : Main}/>
+          <Route exact path="/" component={repoName ? BuildHistory : Main}/>
           <Route exact path="/settings" component={Settings}/>
           <Route exact path="/build/:id" component={BuildDetails}/>
           <Route component={PageNotFound}/>
