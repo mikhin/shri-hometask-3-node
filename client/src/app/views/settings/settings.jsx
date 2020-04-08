@@ -144,12 +144,10 @@ class Settings extends React.Component {
       if (status === 200) {
         this.setState({ fetchStatus: 'settingsUploaded', formError: '', formSuccess: 'Настройки сохранены' });
         updateSettings({
-          settings: {
-            repoName,
-            buildCommand,
-            mainBranch,
-            period: parseInt(period, 10),
-          },
+          repoName,
+          buildCommand,
+          mainBranch,
+          period: parseInt(period, 10),
         });
       } else {
         this.setState({
