@@ -1,5 +1,5 @@
 import Form, {
-  Form__Action, Form__Actions, Form__Field, Form__Error,
+  Form__Action, Form__Actions, Form__Field, Form__Error, Form__Success,
 } from '../form';
 import TextInput from '../text-input';
 import Button from '../button';
@@ -21,6 +21,7 @@ const propTypes = {
   onSubmit: PropTypes.func,
   canSubmit: PropTypes.bool,
   formError: PropTypes.string,
+  formSuccess: PropTypes.string,
 };
 
 const SettingsForm = (props) => {
@@ -40,6 +41,7 @@ const SettingsForm = (props) => {
     onSubmit,
     canSubmit,
     formError,
+    formSuccess,
   } = props;
 
   return (
@@ -133,6 +135,9 @@ const SettingsForm = (props) => {
         {formError && (<Form__Error>
           {formError}
         </Form__Error>)}
+        {formSuccess && (<Form__Success>
+          {formSuccess}
+        </Form__Success>)}
       </Form>
     </div>);
 };

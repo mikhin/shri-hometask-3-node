@@ -15,6 +15,7 @@ class Settings extends React.Component {
       mainBranch: '',
       period: '',
       fetchStatus: '',
+      formSuccess: '',
     };
   }
 
@@ -138,12 +139,10 @@ class Settings extends React.Component {
 
       const { status } = response;
 
-      console.log(status);
-
       const message = await response.text();
 
       if (status === 200) {
-        this.setState({ fetchStatus: 'settingsUploaded', formError: '' });
+        this.setState({ fetchStatus: 'settingsUploaded', formError: '', formSuccess: 'Настройки сохранены' });
         updateSettings({
           settings: {
             repoName,
@@ -172,6 +171,7 @@ class Settings extends React.Component {
       period,
       fetchStatus,
       formError,
+      formSuccess,
     } = this.state;
 
     const canSubmit = (
@@ -206,6 +206,7 @@ class Settings extends React.Component {
               onSubmit={this.onSubmit}
               canSubmit={canSubmit}
               formError={formError}
+              formSuccess={formSuccess}
             />
           </SettingsLayout__Form>
         </SettingsLayout>
