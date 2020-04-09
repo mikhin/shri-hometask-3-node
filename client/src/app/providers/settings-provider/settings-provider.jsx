@@ -24,7 +24,8 @@ class SettingsProvider extends React.Component {
             settings: result,
           });
         },
-      );
+      )
+      .catch(() => {});
   }
 
   updateSettings = (settings) => {

@@ -3,8 +3,6 @@ import SettingsLayout from '../../components/settings-layout';
 import SettingsLayout__Form from '../../components/settings-layout/__form';
 import SettingsForm from '../../components/settings-form';
 
-import withSettings from '../../HOCs/with-settings';
-
 class Settings extends React.Component {
   constructor() {
     super();
@@ -32,7 +30,8 @@ class Settings extends React.Component {
               fetchStatus: 'settingsLoaded',
             });
           },
-        );
+        )
+        .catch(() => {});
     });
   }
 
@@ -213,4 +212,4 @@ class Settings extends React.Component {
   }
 }
 
-export default withSettings(Settings);
+export default Settings;
