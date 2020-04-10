@@ -10,4 +10,8 @@ app.use(express.static(`${__dirname}/public`));
 
 app.use(require('./routes'));
 
-app.listen(5000);
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(5000);
+}
+
+module.exports = app;
