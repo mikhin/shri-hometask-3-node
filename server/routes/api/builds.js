@@ -61,8 +61,8 @@ router.post('/:commitHash', (req, res) => {
         });
     })
     .catch((error) => {
-      const commitDoesNotExistErrorMessage = 'fatal: bad object';
-      if (error.message.includes(commitDoesNotExistErrorMessage)) {
+      if (error.message.includes('fatal: bad object')
+        || error.message.includes('ambiguous argument')) {
         res.status(500);
         return res.send({ message: 'Commit does not exist' });
       }
