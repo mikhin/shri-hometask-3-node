@@ -4,7 +4,7 @@ const app = require('../index');
 
 const stubNockGetRequest = require('./helpers/stubNockGetRequest');
 const stubNockPostRequest = require('./helpers/stubNockPostRequest');
-const settingsStub = require('./stubs/settings-stub');
+const settingsGetStub = require('./stubs/settings-get-stub');
 const buildsGetStub = require('./stubs/builds-get-stub');
 const buildGetStub = require('./stubs/build-get-stub');
 const buildRequestPostStub = require('./stubs/build-request-post-stub');
@@ -69,7 +69,7 @@ describe('Билды', () => {
 
     it('Постановка билда в очередь', async () => {
       stubNockPostRequest('/build/request', buildRequestPostStub);
-      stubNockGetRequest('/conf', settingsStub);
+      stubNockGetRequest('/conf', settingsGetStub);
 
       const res = await request(app)
         .post(`/api/builds/${commitHash}`)
