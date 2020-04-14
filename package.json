@@ -6,7 +6,7 @@
     "dev:client": "node client/scripts/start.js",
     "build:client:production": "node client/scripts/build.js",
     "lint:js": "eslint ./client ./server --fix",
-    "test:server": "NODE_ENV=test jest ./server/tests --runInBand",
+    "test:server": "NODE_ENV=test jest ./server/tests --runInBand --forceExit",
     "test:client": "jest -c ./jest.config.client.js ./client/tests --runInBand"
   },
   "dependencies": {
