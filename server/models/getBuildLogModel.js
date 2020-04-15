@@ -1,12 +1,12 @@
 const axiosRequest = require('../modules/axios-request');
 
-module.exports = (req, res) => {
-  const { buildId } = req.params;
+module.exports = (request, response) => {
+  const { buildId } = request.params;
 
-  axiosRequest.get(`build/log?buildId=${buildId}`)
-    .then((response) => res.send(response.data))
+  axiosRequest.get('build/log', { params: { buildId } })
+    .then((axiosResponse) => response.send(axiosResponse.data))
     .catch((error) => {
-      res.status(500);
-      return res.send(error.toString());
+      response.status(500);
+      return response.send(error.toString());
     });
 };
