@@ -1,5 +1,3 @@
-import Button from '../button';
-
 const propTypes = {
   children: PropTypes.node.isRequired,
 };
@@ -18,16 +16,6 @@ const CommitList = (props) => {
       <ul className={b('commit-list__content')}>
         {children}
       </ul>
-      <div className={b('commit-list__action')}>
-        <Button
-          mods={{
-            theme: 'additional',
-          }}
-          to="/"
-        >
-          Show more
-        </Button>
-      </div>
     </div>
   );
 };
