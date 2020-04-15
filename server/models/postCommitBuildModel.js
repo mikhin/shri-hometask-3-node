@@ -1,15 +1,15 @@
 const axios = require('axios');
 const axiosRequest = require('../modules/axios-request');
 
-module.exports = (req, res) => {
-  const { commitHash } = req.params;
+module.exports = (request, response) => {
+  const { commitHash } = request.params;
   let branchName;
 
   axiosRequest.get('conf')
-    .then((confResponse) => {
-      const { repoName } = confResponse.data.data;
+    .then((axiosResponse) => {
+      const { repoName } = axiosResponse.data.data;
 
-      ({ mainBranch: branchName } = confResponse.data.data);
+      ({ mainBranch: branchName } = axiosResponse.data.data);
       return axios.get(`https://api.github.com/repos/${repoName}/git/commits/${commitHash}`);
     })
     .then((githubResponse) => {
@@ -24,10 +24,10 @@ module.exports = (req, res) => {
     })
     .then((axiosResponse) => {
       const build = axiosResponse.data.data;
-      return res.send({ ...build });
+      return response.send({ ...build });
     })
     .catch((error) => {
-      res.status(500);
-      return res.send(error.toString());
+      response.status(500);
+      return response.send(error.toString());
     });
 };

@@ -1,10 +1,10 @@
 const axiosRequest = require('../modules/axios-request');
 
-module.exports = (req, res) => {
+module.exports = (request, response) => {
   axiosRequest.delete('conf')
-    .then(() => res.send(req.body))
+    .then(() => response.send(request.body))
     .catch((error) => {
-      res.status(500);
-      return res.send(error.toString());
+      response.status(500);
+      return response.send(error.toString());
     });
 };

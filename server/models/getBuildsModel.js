@@ -1,13 +1,10 @@
 const axiosRequest = require('../modules/axios-request');
 
-module.exports = (req, res) => {
+module.exports = (request, response) => {
   axiosRequest.get('build/list')
-    .then((response) => {
-      const builds = response.data.data;
-      res.send([...builds]);
-    })
+    .then((axiosResponse) => response.send([...axiosResponse.data.data]))
     .catch((error) => {
-      res.status(500);
-      return res.send(error.toString());
+      response.status(500);
+      return response.send(error.toString());
     });
 };

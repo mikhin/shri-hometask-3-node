@@ -1,17 +1,20 @@
 const axiosRequest = require('../modules/axios-request');
 
-module.exports = (req, res) => {
+module.exports = (request, response) => {
   axiosRequest.get('conf')
-    .then((response) => {
-      const settings = response.data.data;
+    .then((axiosResponse) => {
+      const settings = axiosResponse.data.data;
+
       if (!settings) {
-        return res.send({});
+        return response.send({});
       }
+
       const period = settings.period.toString();
-      return res.send({ ...settings, period });
+
+      return response.send({ ...settings, period });
     })
     .catch((error) => {
-      res.status(500);
-      return res.send(error.toString());
+      response.status(500);
+      return response.send(error.toString());
     });
 };
