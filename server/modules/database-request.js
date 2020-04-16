@@ -6,7 +6,7 @@ const API_BASE_URL = 'https://hw.shri.yandex/api';
 const https = require('https');
 const axios = require('axios');
 
-const axiosRequest = axios.create({
+const databaseRequest = axios.create({
   baseURL: API_BASE_URL,
   headers: {
     Authorization: `Bearer ${API_AUTH_KEY}`,
@@ -17,4 +17,4 @@ const axiosRequest = axios.create({
   }),
 });
 
-module.exports = axiosRequest;
+module.exports = databaseRequest;

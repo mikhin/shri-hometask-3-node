@@ -1,9 +1,9 @@
-const axiosRequest = require('../modules/axios-request');
+const databaseRequest = require('../modules/database-request');
 
 module.exports = (request, response) => {
   const { buildId } = request.params;
 
-  axiosRequest.get('build/details', { params: { buildId } })
+  databaseRequest.get('build/details', { params: { buildId } })
     .then((axiosResponse) => response.send({ ...axiosResponse.data.data }))
     .catch((error) => {
       response.status(500);

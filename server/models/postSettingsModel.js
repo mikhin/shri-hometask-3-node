@@ -1,4 +1,4 @@
-const axiosRequest = require('../modules/axios-request');
+const databaseRequest = require('../modules/database-request');
 
 module.exports = (req, res) => {
   const {
@@ -8,7 +8,7 @@ module.exports = (req, res) => {
     period = '',
   } = req.body;
 
-  axiosRequest.post('conf', {
+  databaseRequest.post('conf', {
     repoName,
     buildCommand,
     mainBranch,
