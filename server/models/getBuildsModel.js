@@ -1,7 +1,7 @@
-const axiosRequest = require('../modules/axios-request');
+const databaseRequest = require('../modules/database-request');
 
 module.exports = (request, response) => {
-  axiosRequest.get('build/list')
+  databaseRequest.get('build/list')
     .then((axiosResponse) => response.send([...axiosResponse.data.data]))
     .catch((error) => {
       response.status(500);

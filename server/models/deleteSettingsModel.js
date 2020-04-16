@@ -1,7 +1,7 @@
-const axiosRequest = require('../modules/axios-request');
+const databaseRequest = require('../modules/database-request');
 
 module.exports = (request, response) => {
-  axiosRequest.delete('conf')
+  databaseRequest.delete('conf')
     .then(() => response.send(request.body))
     .catch((error) => {
       response.status(500);

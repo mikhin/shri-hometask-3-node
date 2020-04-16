@@ -1,11 +1,11 @@
 const axios = require('axios');
-const axiosRequest = require('../modules/axios-request');
+const databaseRequest = require('../modules/database-request');
 
 module.exports = (request, response) => {
   const { commitHash } = request.params;
   let branchName;
 
-  axiosRequest.get('conf')
+  databaseRequest.get('conf')
     .then((axiosResponse) => {
       const { repoName } = axiosResponse.data.data;
 
@@ -15,7 +15,7 @@ module.exports = (request, response) => {
     .then((githubResponse) => {
       const { message: commitMessage, author: { name: authorName } } = githubResponse.data;
 
-      return axiosRequest.post('build/request', {
+      return databaseRequest.post('build/request', {
         commitMessage,
         commitHash,
         branchName,

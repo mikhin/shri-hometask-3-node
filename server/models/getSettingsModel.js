@@ -1,7 +1,7 @@
-const axiosRequest = require('../modules/axios-request');
+const databaseRequest = require('../modules/database-request');
 
 module.exports = (request, response) => {
-  axiosRequest.get('conf')
+  databaseRequest.get('conf')
     .then((axiosResponse) => {
       const settings = axiosResponse.data.data;
 
