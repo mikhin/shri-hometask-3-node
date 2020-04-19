@@ -1,0 +1,21 @@
+POST http://localhost:4000/notify-agent
+Content-Type: application/json
+
+{
+  "host": "localhost",
+  "port": 6000
+}
+
+###
+
+POST http://localhost:4000/notify-build-result
+Content-Type: application/json
+
+{
+  "buildId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "isSuccess": true,
+  "log": "LOG LOL"
+}
+
+###
+

@@ -5,26 +5,19 @@ Authorization: Bearer
 Content-Type: application/json
 
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npm install",
   "mainBranch": "master",
   "period": 20,
-  "repoName": "mikhin/mikhin.github.io"
+  "repoName": "mikhin/little-test-repo"
 }
 
 ###
 
 # /builds/:commitHash
-POST http://0.0.0.0:5000/api/builds/b2cd033a9d5203d2cf1d64e426efd53554ec6de5
+POST http://0.0.0.0:5000/api/builds/245d5aac4d1e75853eb42cc2684f7e135ba4314a
 accept: */*
-Authorization: Bearer
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM4MjU4MzE4IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1pa2hpbiIsInVybjpnaXRodWI6bmFtZSI6Ill1cmkgTWlraGluIiwidXJuOmdpdGh1Yjp1cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL21pa2hpbiIsIm5iZiI6MTU4Njk4Mjc2NCwiZXhwIjoxNTg5NTc0NzY0LCJpc3MiOiJTaHJpLUhvbWV3b3JrIiwiYXVkIjoiU2hyaS1Ib21ld29yayJ9.yu_VzgM1BCdrK8xS-aPqz6uZoPfRdA4_o07iyEXkquc
 Content-Type: application/json
-
-{
-  "commitMessage": "1",
-  "commitHash": "233ee840255a82c6d8d5f6dcb9819cf4da289663",
-  "branchName": "master",
-  "authorName": "yuri"
-}
 
 ###
 
@@ -46,4 +39,3 @@ Authorization: Bearer
 DELETE http://localhost:5000/api/settings
 
 ###
-

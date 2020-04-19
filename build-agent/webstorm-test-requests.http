@@ -1,0 +1,17 @@
+POST http://localhost:6000/build
+Content-Type: application/json
+
+{
+  "buildId": "123",
+  "repoName": "mikhin/shri-2020-fp",
+  "commitHash": "cd7a4b845a6ce214876847232bb5b22e20ae096d",
+  "command": "npm install",
+  "branchName": "master"
+}
+
+###
+
+GET http://localhost:6000/state
+Content-Type: application/json
+
+###
