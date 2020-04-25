@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./ci-server-dist"
+  },
+  "include": [
+    "./server",
+    "./typings"
+  ]
+}

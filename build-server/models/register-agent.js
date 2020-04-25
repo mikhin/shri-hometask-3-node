@@ -5,7 +5,7 @@ const some = require('lodash/some');
 const checkHostValidity = require('../helpers/check-host-validity');
 const checkPortValidity = require('../helpers/check-port-validity');
 
-module.exports = (request, response) => {
+export default (request, response) => {
   const { body: { host, port } } = request;
 
   if (!host || !port) {

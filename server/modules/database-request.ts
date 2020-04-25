@@ -1,0 +1,20 @@
+import https from 'https';
+import axios from 'axios';
+
+require('dotenv').config();
+
+const API_AUTH_KEY = process.env.APIKEY;
+const API_BASE_URL = 'https://hw.shri.yandex/api';
+
+const databaseRequest = axios.create({
+  baseURL: API_BASE_URL,
+  headers: {
+    Authorization: `Bearer ${API_AUTH_KEY}`,
+    'Content-Type': 'application/json',
+  },
+  httpsAgent: new https.Agent({
+    rejectUnauthorized: false,
+  }),
+});
+
+export default databaseRequest;
