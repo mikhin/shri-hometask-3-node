@@ -9,6 +9,16 @@ module.exports = {
     "react/jsx-pascal-case": 0,
     "camelcase": "off",
     "class-methods-use-this": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
   },
   globals: {
     React: true,
