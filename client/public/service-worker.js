@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const CACHE_NAME = 'react';
 
 self.addEventListener('activate', (event) => {

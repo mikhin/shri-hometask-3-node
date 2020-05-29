@@ -181,6 +181,7 @@ class Settings extends React.Component {
 
     return (
       <PageLayout
+        logoText="Настройки"
         logoURL="/"
         isPageLoaded={fetchStatus !== 'settingsLoading'}
       >
