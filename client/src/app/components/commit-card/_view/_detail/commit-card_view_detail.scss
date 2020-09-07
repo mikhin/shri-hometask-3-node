@@ -1,0 +1,24 @@
+.commit-card_view_detail {
+  box-shadow: 0 1px 1px rgba(67, 68, 69, 0.3), 0 0 1px rgba(67, 68, 69, 0.3);
+  border-radius: var(--space_xxs);
+
+  .commit-card__content {
+    display: block;
+  }
+
+  .commit-card__details {
+    position: static;
+    padding-bottom: var(--space_xs);
+    border-bottom: 1px solid var(--color_border_secondary);
+  }
+
+  .commit-card__meta {
+    max-width: none;
+    position: static;
+    flex-direction: row;
+  }
+
+  .commit-card__datetime {
+    margin-bottom: 0;
+  }
+}

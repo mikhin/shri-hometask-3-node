@@ -1,0 +1,14 @@
+.commit-card__branch {
+  margin-right: 4px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: var(--space_l);
+    height: var(--space_xs);
+    background-image: url('./commit-card__branch.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+  }
+}

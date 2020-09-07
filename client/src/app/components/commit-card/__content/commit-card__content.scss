@@ -1,0 +1,10 @@
+.commit-card__content {
+  margin-left: var(--space_xxl);
+  max-width: 70%;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+  }
+}

@@ -1,0 +1,12 @@
+.logo {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  color: var(--color_text_primary);
+
+  @media (min-width: 1024px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}

@@ -1,0 +1,13 @@
+.commit-card__details {
+  padding-bottom: var(--space_xs);
+  border-bottom: 1px solid var(--color_border_secondary);
+  margin: 0 0 var(--space_xs);
+
+  @media (min-width: 1024px) {
+    bottom: 4px;
+    padding-bottom: 0;
+    border-bottom: 0;
+    order: 1;
+    width: 100%;
+  }
+}

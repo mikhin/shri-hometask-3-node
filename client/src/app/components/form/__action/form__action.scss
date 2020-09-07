@@ -1,0 +1,9 @@
+.form__action {
+  &:not(:last-child) {
+    margin-bottom: var(--space_m);
+
+    @media (min-width: 1024px) {
+      margin-right: var(--space_xs);
+    }
+  }
+}

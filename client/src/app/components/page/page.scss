@@ -1,0 +1,10 @@
+.page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color_text_primary);
+}

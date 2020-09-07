@@ -1,0 +1,10 @@
+.log {
+  padding: 4px var(--space_m);
+  background: #F2F2F2;
+  box-sizing: border-box;
+
+  @media (min-width: 1024px) {
+    border-radius: var(--space_xxs);
+    padding: var(--space_xs) var(--space_m);
+  }
+}

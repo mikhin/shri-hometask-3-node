@@ -1,0 +1,19 @@
+.button_theme_additional {
+  color: var(--color_text_primary);
+  background: var(--color_button_bg_secondary);
+  border-radius: 4px;
+  padding: var(--space_m) var(--space_xl);
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    padding: var(--space_xs) 14px;
+  }
+
+  &:hover {
+    background-color: var(--color_button_bg_secondary_accent);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--color_border_primary);
+  }
+}

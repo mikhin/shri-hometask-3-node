@@ -1,0 +1,24 @@
+.commit-card__link {
+  display: block;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--color_text_primary);
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: var(--space_xxs);
+    box-shadow: 0 1px 1px rgba(67, 68, 69, 0.3), 0 0 1px rgba(67, 68, 69, 0.3);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  &:hover, &:focus {
+    &::after {
+      box-shadow: 0 2px var(--space_xs) rgba(67, 68, 69, 0.3), 0 0 1px rgba(67, 68, 69, 0.3);
+    }
+  }
+}

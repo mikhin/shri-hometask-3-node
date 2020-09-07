@@ -1,0 +1,10 @@
+.form__description {
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color_text_secondary);
+  margin: 0 0 20px;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 26px;
+  }
+}

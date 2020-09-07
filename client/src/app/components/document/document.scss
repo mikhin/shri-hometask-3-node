@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "YS Text";
+  font-weight: 400;
+  src: url("./text-regular.woff2") format("woff2"),
+  url("./text-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "YS Text";
+  font-weight: 500;
+  src: url("./text-medium.woff2") format("woff2"),
+  url("./text-medium.woff") format("woff");
+}
+
+.document {
+  font-family: 'YS Text', 'Helvetica Neue', Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  --color_text_primary: #000;
+  --color_text_secondary: #7F8285;
+  --color_success: #00B341;
+  --color_warning: #FF3333;
+  --color_button_bg_primary: #FFCC00;
+  --color_button_bg_primary_accent: #F2C200;
+  --color_button_bg_secondary: #E6E6E6;
+  --color_button_bg_secondary_accent: #DBDBDB;
+  --color_border_primary: #B3B3B3;
+  --color_border_secondary: #F0F2F3;
+  --space_xxs: 6px;
+  --space_xs: 8px;
+  --space_s: 10px;
+  --space_m: 12px;
+  --space_l: 16px;
+  --space_xl: 20px;
+  --space_xxl: 24px;
+}
+
+.document__body, .document__app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

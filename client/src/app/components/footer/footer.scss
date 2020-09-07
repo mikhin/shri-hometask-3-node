@@ -1,0 +1,10 @@
+.footer {
+  background-color: var(--color_border_secondary);
+  padding-top: var(--space_m);
+  padding-bottom: var(--space_m);
+
+  @media (min-width: 1024px) {
+    padding-bottom: var(--space_xs);
+    padding-top: var(--space_xs);
+  }
+}

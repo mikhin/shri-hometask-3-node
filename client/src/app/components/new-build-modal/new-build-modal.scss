@@ -1,0 +1,18 @@
+.new-build-modal {
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #B3B3B3;
+  width: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  @media (min-width: 1024px) {
+    width: 485px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

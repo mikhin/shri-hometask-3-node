@@ -1,0 +1,9 @@
+.commit-card__header {
+  margin-bottom: 5px;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+  }
+}
