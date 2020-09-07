@@ -24,6 +24,7 @@ class BuildDetails extends React.Component {
 
   componentDidMount() {
     this.fetchBuild();
+    this.fetchLog();
   }
 
   fetchBuild = async () => {
@@ -55,10 +56,17 @@ class BuildDetails extends React.Component {
               datetime: build.start,
               duration: build.duration,
             },
-          }, this.fetchLog);
+          });
         },
       )
       .catch(() => {
+        const {
+          history: {
+            push,
+          },
+        } = this.props;
+
+        push('/');
       });
   };
 

@@ -16,6 +16,8 @@ module.exports = {
     T: true,
     ENV: true,
     b: true,
+    page: true,
+    context: true,
   },
   env: {
     "browser": true

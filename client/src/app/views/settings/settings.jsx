@@ -3,8 +3,6 @@ import SettingsLayout from '../../components/settings-layout';
 import SettingsLayout__Form from '../../components/settings-layout/__form';
 import SettingsForm from '../../components/settings-form';
 
-import withSettings from '../../HOCs/with-settings';
-
 class Settings extends React.Component {
   constructor() {
     super();
@@ -15,6 +13,7 @@ class Settings extends React.Component {
       mainBranch: '',
       period: '',
       fetchStatus: '',
+      formSuccess: '',
     };
   }
 
@@ -31,7 +30,8 @@ class Settings extends React.Component {
               fetchStatus: 'settingsLoaded',
             });
           },
-        );
+        )
+        .catch(() => {});
     });
   }
 
@@ -138,19 +138,15 @@ class Settings extends React.Component {
 
       const { status } = response;
 
-      console.log(status);
-
       const message = await response.text();
 
       if (status === 200) {
-        this.setState({ fetchStatus: 'settingsUploaded', formError: '' });
+        this.setState({ fetchStatus: 'settingsUploaded', formError: '', formSuccess: 'Настройки сохранены' });
         updateSettings({
-          settings: {
-            repoName,
-            buildCommand,
-            mainBranch,
-            period: parseInt(period, 10),
-          },
+          repoName,
+          buildCommand,
+          mainBranch,
+          period: parseInt(period, 10),
         });
       } else {
         this.setState({
@@ -172,6 +168,7 @@ class Settings extends React.Component {
       period,
       fetchStatus,
       formError,
+      formSuccess,
     } = this.state;
 
     const canSubmit = (
@@ -206,6 +203,7 @@ class Settings extends React.Component {
               onSubmit={this.onSubmit}
               canSubmit={canSubmit}
               formError={formError}
+              formSuccess={formSuccess}
             />
           </SettingsLayout__Form>
         </SettingsLayout>
@@ -214,4 +212,4 @@ class Settings extends React.Component {
   }
 }
 
-export default withSettings(Settings);
+export default Settings;

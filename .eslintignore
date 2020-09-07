@@ -1,2 +1,4 @@
 client/config
 client/scripts
+server/uploads
+server/public

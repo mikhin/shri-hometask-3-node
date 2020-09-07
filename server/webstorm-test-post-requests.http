@@ -1,17 +1,22 @@
 # /api/settings
 POST http://0.0.0.0:5000/api/settings
 accept: */*
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM4MjU4MzE4IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1pa2hpbiIsInVybjpnaXRodWI6bmFtZSI6Ill1cmkgTWlraGluIiwidXJuOmdpdGh1Yjp1cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL21pa2hpbiIsIm5iZiI6MTU4NDE4NDM5NSwiZXhwIjoxNTg2Nzc2Mzk1LCJpc3MiOiJTaHJpLUhvbWV3b3JrIiwiYXVkIjoiU2hyaS1Ib21ld29yayJ9.pxtqCCAUhg7H7-I8mPT9S-O42M14zQpQ23MVu8Wa4f4
+Authorization: Bearer
 Content-Type: application/json
 
-{}
+{
+  "buildCommand": "npm run build",
+  "mainBranch": "master",
+  "period": 20,
+  "repoName": "mikhin/mikhin.github.io"
+}
 
 ###
 
 # /builds/:commitHash
-POST http://0.0.0.0:5000/api/builds/d6ac021206aeb5c30688fa206a6b36d63e283f22
+POST http://0.0.0.0:5000/api/builds/b2cd033a9d5203d2cf1d64e426efd53554ec6de5
 accept: */*
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM4MjU4MzE4IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1pa2hpbiIsInVybjpnaXRodWI6bmFtZSI6Ill1cmkgTWlraGluIiwidXJuOmdpdGh1Yjp1cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL21pa2hpbiIsIm5iZiI6MTU4NDE4NDM5NSwiZXhwIjoxNTg2Nzc2Mzk1LCJpc3MiOiJTaHJpLUhvbWV3b3JrIiwiYXVkIjoiU2hyaS1Ib21ld29yayJ9.pxtqCCAUhg7H7-I8mPT9S-O42M14zQpQ23MVu8Wa4f4
+Authorization: Bearer
 Content-Type: application/json
 
 {
@@ -26,13 +31,19 @@ Content-Type: application/json
 # /builds/:buildId/start
 POST http://0.0.0.0:5000/api/builds/9989698b-393c-435c-ace2-7e728da3f04f/start
 accept: */*
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM4MjU4MzE4IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1pa2hpbiIsInVybjpnaXRodWI6bmFtZSI6Ill1cmkgTWlraGluIiwidXJuOmdpdGh1Yjp1cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL21pa2hpbiIsIm5iZiI6MTU4NDE4NDM5NSwiZXhwIjoxNTg2Nzc2Mzk1LCJpc3MiOiJTaHJpLUhvbWV3b3JrIiwiYXVkIjoiU2hyaS1Ib21ld29yayJ9.pxtqCCAUhg7H7-I8mPT9S-O42M14zQpQ23MVu8Wa4f4
+Authorization: Bearer
 
 ###
 
 # /builds/:buildId/finish
 POST http://0.0.0.0:5000/api/builds/db31e0f2-8b6d-4a47-9b2f-e38f2856b49f/finish
 accept: */*
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM4MjU4MzE4IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Im1pa2hpbiIsInVybjpnaXRodWI6bmFtZSI6Ill1cmkgTWlraGluIiwidXJuOmdpdGh1Yjp1cmwiOiJodHRwczovL2FwaS5naXRodWIuY29tL3VzZXJzL21pa2hpbiIsIm5iZiI6MTU4NDE4NDM5NSwiZXhwIjoxNTg2Nzc2Mzk1LCJpc3MiOiJTaHJpLUhvbWV3b3JrIiwiYXVkIjoiU2hyaS1Ib21ld29yayJ9.pxtqCCAUhg7H7-I8mPT9S-O42M14zQpQ23MVu8Wa4f4
+Authorization: Bearer
 
 ###
+
+# curl -X DELETE http://localhost:5000/api/settings
+DELETE http://localhost:5000/api/settings
+
+###
+
